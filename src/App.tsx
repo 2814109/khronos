@@ -7,7 +7,8 @@ import {
   RootRoute,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import { Button } from "@/components/ui/button";
+import { Home } from "./sections/Home";
+import { About } from "./sections/About";
 
 const rootRoute = new RootRoute({
   component: () => (
@@ -15,9 +16,6 @@ const rootRoute = new RootRoute({
       <div className="p-2 flex gap-2">
         <Link to="/" className="[&.active]:font-bold">
           Home
-          <div>
-            <Button variant="outline">Button</Button>
-          </div>
         </Link>{" "}
         <Link to="/about" className="[&.active]:font-bold">
           About
@@ -33,21 +31,13 @@ const rootRoute = new RootRoute({
 const indexRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: function Index() {
-    return (
-      <div className="p-2">
-        <h3>Welcome Home!</h3>
-      </div>
-    );
-  },
+  component: Home,
 });
 
 const aboutRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "/about",
-  component: function About() {
-    return <div className="p-2">Hello from About!</div>;
-  },
+  component: About,
 });
 
 const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
