@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 const rootRoute = new RootRoute({
   component: () => (
-    <>
+    <main>
       <div className="p-2 flex gap-2">
         <Link to="/" className="[&.active]:font-bold">
           Home
@@ -26,7 +26,7 @@ const rootRoute = new RootRoute({
       <hr />
       <Outlet />
       <TanStackRouterDevtools />
-    </>
+    </main>
   ),
 });
 
