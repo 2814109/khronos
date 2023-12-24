@@ -7,6 +7,7 @@ import {
   RootRoute,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { Button } from "@/components/ui/button";
 
 const rootRoute = new RootRoute({
   component: () => (
@@ -14,6 +15,9 @@ const rootRoute = new RootRoute({
       <div className="p-2 flex gap-2">
         <Link to="/" className="[&.active]:font-bold">
           Home
+          <div>
+            <Button variant="outline">Button</Button>
+          </div>
         </Link>{" "}
         <Link to="/about" className="[&.active]:font-bold">
           About
