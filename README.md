@@ -3,6 +3,7 @@
 - Effect
 - XState
 - TanstackRouterV1
+- shadcn/ui
 
 # React + TypeScript + Vite
 
