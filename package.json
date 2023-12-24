@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-router": "^1.0.0",
     "@tanstack/router-devtools": "^1.0.0",
+    "@types/node": "^20.10.5",
     "effect": "2.0.0-next.62",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
