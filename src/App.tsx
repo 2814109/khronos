@@ -50,8 +50,6 @@ declare module "@tanstack/react-router" {
   }
 }
 function App() {
-  // const [count, setCount] = useState(0)
-
   return <RouterProvider router={router} />;
 }
 
